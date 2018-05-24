@@ -1,0 +1,77 @@
+
+.pager {
+  margin: $space 0;
+  ul {
+    @extend %list-reset;
+    text-align: center;
+    @include breakpoint($bp-med) {
+      text-align: left;
+    }
+    li {
+      margin: 0 $space-half 0 0;
+      @include breakpoint($bp-med) {
+        margin: 0 $space 0 0;
+      }
+      display: inline-block;
+
+      &:first-child,
+      &:last-child {
+        a {
+          background: none;
+          color: $grey-dark;
+        }
+      }
+      &:first-child {
+        display: none;
+        @include breakpoint($bp-med) {
+          display: inline-block;
+          a {
+            padding-left: $pad-half;
+          }
+          &:before {
+            content: '<';
+          }
+        }
+      }
+      &:last-child {
+        display: none;
+        @include breakpoint($bp-med) {
+          display: inline-block;
+          a {
+            padding-right: $pad-half;
+          }
+          &:after {
+            content: '>';
+          }
+        }
+      }
+    }
+  }
+
+
+  span {
+    background: $purple;
+    display: inline-block;
+    color: $white;
+    cursor: default;
+    padding: $pad-quarter $pad-half;
+    @include breakpoint($bp-med) {
+      padding: $pad-half $pad;
+    }
+  }
+  a {
+
+    display: inline-block;
+    color: $white;
+    text-decoration: none;
+    background: $grey-dark;
+    padding: $pad-quarter $pad-half;
+    @include breakpoint($bp-med) {
+      padding: $pad-half $pad;
+    }
+    &:hover,
+    &:focus {
+      text-decoration: none;
+    }
+  }
+}

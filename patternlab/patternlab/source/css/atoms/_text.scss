@@ -1,0 +1,69 @@
+
+/**
+ * Text Blocks
+ * -----------
+ */
+
+p {
+  margin-bottom: $space;
+}
+
+blockquote {
+  margin-bottom: $space;
+  padding-left: $pad;
+  border-left: 1px solid $grey;
+  color: $grey;
+  font-style: italic;
+}
+
+address {
+  font-style: normal;
+}
+
+hr {
+  margin: $space-double 0;
+  border: 0;
+  height: 2px;
+  background: $grey-dark;
+}
+
+abbr {
+  border-bottom: 1px dotted $grey;
+  cursor: help;
+}
+
+small {
+  font-size: $font-size-sm;
+}
+
+.league-gothic {
+  @include copy-face-secondary;
+}
+
+/**
+ * Inline Text
+ * -----------
+ */
+
+a {
+  @include link;
+}
+
+mark {
+  color: $black;
+  background: $callout-color;
+  padding: 0 .25em;
+}
+
+
+/**
+ * Text Alts
+ */
+
+.text--clr-reverse {
+  @include clr-reverse;
+}
+
+.text-highlight {
+  color: $link-color;
+}

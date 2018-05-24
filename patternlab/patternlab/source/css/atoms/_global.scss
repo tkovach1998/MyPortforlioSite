@@ -1,0 +1,420 @@
+/**
+ * Global Classes
+ */
+
+.cf {
+    @extend %cf;
+}
+
+// Comletely hide el
+.is-hidden {
+    display: none;
+    visibility: hidden;
+}
+
+// Completely remove from flow,
+// but leave visible to screen readers
+.is-vishidden {
+    position: absolute;
+    overflow: hidden;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    border: 0 none;
+    clip: rect(1px, 1px, 1px, 1px);
+}
+
+.is-align-right {
+    text-align: right;
+}
+
+.is-error {
+    color: $error;
+    display: none !important;
+    ;
+}
+
+.field-error {
+    &.is-error {
+        display: block !important;
+        ;
+    }
+}
+
+.is-valid {
+    color: green;
+}
+
+.is-warning {
+    color: yellow;
+}
+
+
+// Style specific helpers
+.s-background-white {
+    background: #fff;
+}
+
+.s-backgound-callout {
+    background: $link-color;
+}
+
+
+.line-one {
+    line-height: 1;
+}
+
+.bottom-out {
+    margin-bottom: 0;
+
+    +p {
+        margin-top: 0;
+    }
+}
+
+.top-out {
+    margin-top: 0;
+}
+
+.top-bot-margin {
+    margin: $space 0;
+}
+
+.margin-bottom {
+    margin-bottom: $space;
+}
+
+.margin-bottom-large {
+    margin-bottom: $space-double;
+    @include breakpoint($bp-med) {
+        margin-bottom: $space + 4;
+    }
+}
+
+.round-btn-mw {
+    max-width: 12%;
+}
+
+.all-sides-padding {
+    padding: 1% 4%;
+}
+
+.left-padding {
+    padding: 1% 4%;
+}
+
+.right-padding {
+    padding: 1% 4%;
+}
+
+.horz-padding {
+    padding: 0 4%;
+    h1 {
+        margin-bottom: 0;
+    }
+}
+
+.more-content {
+    text-decoration: none;
+}
+
+.container {
+    &.all-sides-padding {
+        padding: $pad;
+    }
+    &.double-top-bot-margin {
+        margin-top: $space-double;
+        margin-bottom: $space-double;
+    }
+}
+
+
+.max-width {
+    max-width: $max-width;
+}
+
+.no-padding {
+    padding: 0;
+}
+
+.center-div {
+    margin: 0 auto;
+}
+
+.intro-copy {
+    @include breakpoint($bp-med) {
+        padding: 0;
+    }
+}
+
+.desktop-max-width {
+    @include breakpoint($bp-med) {
+        max-width: 75%;
+    }
+    @include breakpoint($bp-large) {
+        max-width: 55%;
+    }
+}
+
+.text-large {
+    font-size: $font-size-large;
+}
+
+.intro-message {
+    font-size: 1.2em;
+    font-weight: normal;
+    line-height: 1.3em;
+}
+
+
+.clear-style {
+    list-style: none;
+}
+
+
+
+/* Floats */
+
+.float-left {
+    float: left;
+}
+
+.float-right {
+    float: right;
+}
+
+
+
+/* Text-Align */
+
+.align-right {
+    text-align: right;
+}
+
+.align-center {
+    text-align: center;
+}
+
+.align-left {
+    text-align: left;
+}
+
+
+.alert {
+    padding: 0.938em;
+    margin-bottom: 1.250em;
+    border: 0.063em solid transparent;
+    border-radius: 0.250em;
+    &.success,
+    &.valid {
+        color: #3c763d;
+        background-color: #dff0d8;
+        border-color: #d6e9c6;
+    }
+    &.error {
+        color: #a94442;
+        background-color: #f2dede;
+        border-color: #ebccd1;
+    }
+
+    &.warning {
+        color: #8a6d3b;
+        background-color: #fcf8e3;
+        border-color: #faebcc;
+    }
+
+    &.information {
+        color: #31708f;
+        background-color: #d9edf7;
+        border-color: #bce8f1;
+    }
+}
+
+
+/*
+  Text Colors
+*/
+
+.grey-light-text {
+    color: $grey-light;
+}
+
+.white-text {
+    color: $white;
+}
+
+.purple-text {
+    color: $purple;
+}
+
+.yellow-text {
+    color: $yellow;
+}
+
+.yellow-link {
+    @include link-reverse;
+}
+
+.white-link {
+    @include link-reverse-white;
+}
+
+.white-link-underline {
+    @include link--white;
+}
+
+
+/*
+  Background Colors
+*/
+
+.white-bg {
+    background: $white;
+}
+
+.black-bg {
+    background: $grey-dark;
+}
+
+.yellow-bg {
+    background: $yellow;
+}
+
+.grey-bg {
+    background: $grey-med;
+}
+
+.purple-bg {
+    background: $purple;
+    color: $white;
+    a {
+        color: $white;
+        &:hover,
+        &:focus {
+            color: darken($white, 15%);
+        }
+    }
+}
+
+.quick-links-overlay-bg {
+    background: rgba(0, 0, 0, .8);
+}
+
+.blue-text {
+    color: $blue;
+}
+
+.green-text {
+    color: $green;
+}
+
+.dgreen-text {
+    color: $dgreen;
+}
+
+.green-bg {
+    background-color: $green;
+}
+
+.blue-bg {
+    background-color: $blue;
+}
+
+.yellow-highlight {
+    background-color: $yellow;
+    background-opacity: 50%;
+}
+
+.tom-logo {
+    border-style: solid;
+}
+
+.orange-bg {
+    background-color: $orange;
+}
+
+.pink-bg {
+    background-color: $pink;
+}
+
+.beige-bg {
+    background-color: $beige;
+}
+
+.beige-text {
+    color: $beige;
+}
+
+.mgrey-text {
+    color: $mgrey;
+}
+
+.mgrey-bg {
+  background-color: $mgrey;
+}
+
+.works {
+    padding: auto;
+}
+
+.hero-content {
+
+    position: absolute;
+    top: 220px;
+    //left: 250px;
+
+
+    .hero-text {
+        font-size: 2em;
+        font-weight: 800;
+        line-height: 1;
+
+        @include breakpoint($bp-med) {
+            font-size: 4em;
+        }
+    }
+
+    .sub-text {
+        font-size: .75em;
+        font-weight: 200;
+        display: block;
+
+
+        @include breakpoint($bp-med) {
+            font-size: .5em;
+        }
+    }
+}
+
+.resume-content {
+
+    //position: absolute;
+    //top: 220px;
+    //left: 250px;
+
+
+    .resume-text {
+        font-size: 2em;
+        font-weight: 900;
+        line-height: 1;
+
+        @include breakpoint($bp-med) {
+            font-size: 4em;
+        }
+    }
+
+    .rsub-text {
+        font-size: 1em;
+        font-weight: 100;
+        display: block;
+
+
+        @include breakpoint($bp-med) {
+            font-size: 1.5em;
+        }
+
+        @include breakpoint($bp-large) {
+            font-size: 2.5em;
+        }
+    }
+}

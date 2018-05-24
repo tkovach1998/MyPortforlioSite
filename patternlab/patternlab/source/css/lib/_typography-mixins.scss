@@ -1,0 +1,180 @@
+
+/**
+ * Typography
+ * ==========
+ * Mixins and extends for fancy type-work
+ */
+
+@mixin font-face($name, $path, $weight: null, $style: null, $exts: eot woff2 woff ttf svg) {
+  $src: null;
+
+  $extmods: (
+    eot: "?",
+    svg: "#" + str-replace($name, " ", "_")
+  );
+
+  $formats: (
+    otf: "opentype",
+    ttf: "truetype"
+  );
+
+  @each $ext in $exts {
+    $extmod: if(map-has-key($extmods, $ext), $ext + map-get($extmods, $ext), $ext);
+    $format: if(map-has-key($formats, $ext), map-get($formats, $ext), $ext);
+    $src: append($src, url(quote($path + "." + $extmod)) format(quote($format)), comma);
+  }
+
+  @font-face {
+    font-family: quote($name);
+    font-style: $style;
+    font-weight: $weight;
+    src: $src;
+  }
+}
+
+@include font-face("League Gothic", "/2017-assets/fonts/league-gothic", normal, normal, eot woff ttf svg);
+
+@mixin primaryFont {
+  font-family: $font-primary;
+  
+}
+
+@mixin secondaryFont {
+  font-family: $font-secondary;
+}
+
+@mixin copy-face {
+  @include primaryFont;
+}
+
+@mixin copy-face-secondary {
+  @include secondaryFont;
+}
+
+@mixin copy-face {
+  font-family: $font-primary;
+  font-weight: 400;
+}
+
+@mixin title-face {
+  font-family: $font-secondary;
+}
+
+@mixin link {
+  color: $mgrey;
+  transition: color 500ms;
+  text-decoration: underline;
+
+  &:hover,
+  &:focus {
+    color: $mgrey;
+    text-decoration: none;
+  }
+}
+
+@mixin link--white {
+  color: $mgrey;
+  text-decoration: underline;
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+  }
+}
+
+@mixin link-reverse {
+  color: $yellow-link-color;
+  transition: color 500ms;
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    color: $yellow-link-color--hover;
+    text-decoration: underline;
+  }
+}
+
+@mixin link-reverse-white {
+  color: $white;
+  transition: color 500ms;
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+  }
+}
+
+@mixin heading-link {
+  color: $blue;
+  text-decoration: none;
+  transition: color 500ms;
+
+  &:hover,
+  &:focus {
+    color: $blue;
+    text-decoration: underline;
+  }
+}
+
+@mixin heading {
+  @include title-face;
+  margin-bottom: 0.35em;
+  line-height: 1.2;
+  text-transform: none;
+  font-weight: 400;
+
+  a {
+    @include heading-link;
+  }
+}
+
+@mixin heading-1 {
+  @include heading;
+  font-size: 2.75em;
+  @include breakpoint($bp-med) {
+    font-size: 5.5em;
+  }
+  @include breakpoint($bp-large) {
+    font-size: 10.500em;
+  }
+  text-transform: uppercase;
+}
+
+@mixin heading-2 {
+  @include heading;
+
+  font-size: 2.25em;
+  @include breakpoint($bp-med) {
+    font-size: 3.5em;
+  }
+  @include breakpoint($bp-large) {
+    font-size: 8.125em;
+  }
+  text-transform: uppercase;
+}
+
+@mixin heading-3 {
+  @include heading;
+  font-size: 1.85em;
+  @include breakpoint($bp-med) {
+    font-size: 2.5em;
+  }
+  @include breakpoint($bp-large) {
+    font-size: 4.875em;
+  }
+}
+
+@mixin heading-4 {
+  @include heading;
+  font-size: 1.6em;
+}
+
+@mixin heading-5 {
+  @include heading;
+  font-size: 1.2em;
+}
+
+@mixin heading-6 {
+  @include heading;
+  font-size: 1em;
+}

@@ -1,0 +1,18 @@
+.resource-collection {
+  @extend %list-reset;
+  li {
+    margin: $space-half 0;
+    a {
+      padding-left: 2.188em;
+      height: 2.188em;
+      display: inline-block;
+      padding-top: 0.625em;
+      background-position: center left;
+      background-repeat: no-repeat;
+      //&[href$=".pdf"]
+      &.document-pdf {
+        background-image: url(/images/Adobe_PDF_file_icon_24x24.png);
+      }
+    }
+  }
+}

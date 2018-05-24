@@ -1,0 +1,45 @@
+.latest-news-container {
+  @include breakpoint($bp-large) {
+    min-height: 547px;
+  }
+}
+.latest-news {
+  height: 100%;
+  .news-header {
+    @include secondaryFont;
+    font-size: 1.875em;
+    margin: 0 0 $space 0;
+    color: $purple;
+    text-transform: capitalize;
+  }
+  .button {
+    margin-top: 2em;
+  }
+}
+.feed--list {
+  @extend %list-reset;
+}
+li {
+  &.feed-item {
+    margin-bottom: $space;
+  }
+}
+.feed-item {
+  margin-bottom: $space;
+}
+.feed-date {
+  font-size: $font-size-sm;
+  color: $grey-dark;
+}
+
+.topic-header {
+  margin-bottom: $space;
+}
+.updates-by-topic {
+  .topic-container {
+    padding: $pad;
+  }
+  .topic-title {
+    margin: 0 0 $space 0;
+  }
+}

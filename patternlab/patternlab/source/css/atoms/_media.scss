@@ -1,0 +1,26 @@
+
+img,
+video,
+object {
+  max-width: 100%;
+  height: auto;
+  &.full-col-width-media {
+    width: 100%;
+  }
+}
+
+iframe {
+  margin-bottom: $space;
+}
+
+figure {
+  margin-bottom: $space;
+
+  img {
+    margin-bottom: $space-quarter;
+  }
+}
+
+figcaption {
+  font-style: italic;
+}

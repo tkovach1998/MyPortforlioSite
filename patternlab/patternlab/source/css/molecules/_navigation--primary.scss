@@ -1,0 +1,246 @@
+
+.nav--primary {
+  @include nav-reset;
+  display: none;
+  margin: 0;
+  text-align: center;
+
+  @include breakpoint($bp-med) {
+    display: block !important;
+  }
+  @include breakpoint($bp-large) {
+    margin-top: 5em;
+  }
+
+
+  > ul {
+    position: relative;
+
+    .flexbox & {
+      @include breakpoint($bp-med) {
+        display: flex;
+        justify-content: space-between;
+      }
+    }
+
+    > li {
+      > .nav__dropdown {
+        display: none;
+      }
+
+      > a {
+        padding: 1em 1em;
+        text-align: left;
+        color: $orange;
+        text-decoration: none;
+        text-transform: uppercase;
+        transition: color 500ms;
+        border-bottom: 2px transparent solid;
+
+        @include breakpoint($bp-med) {
+          text-align: center;
+          font-size: 1em;
+        }
+
+        @include breakpoint($bp-large) {
+          font-size: 1.025em;
+        }
+
+        @include breakpoint($bp-content-break) {
+          font-size: 1.3em;
+        }
+
+        &:focus,
+        &:hover {
+          border-bottom: 2px $orange solid;
+        }
+        &.active {
+          border-bottom: 2px $yellow solid;
+        }
+      }
+
+      &:focus,
+      &:hover {
+        > .nav__dropdown {
+          background: $white;
+          border-bottom: 0.313em $orange solid;
+          @include breakpoint($bp-med) {
+            display: block;
+
+            .flexbox & {
+              display: flex;
+              flex-wrap: wrap;
+            }
+          }
+        }
+      }
+    }
+    li {
+      li {
+        a {
+          &.active {
+            color: $yellow;
+          }
+        }
+      }
+    }
+  }
+
+  > ul > li > ul {
+    display: block;
+    padding: 1em;
+    width: 100%;
+    background: #f3f4f4;
+
+    @include breakpoint($bp-med) {
+      position: absolute;
+    }
+
+    > li {
+      padding: 1em;
+      display: inline-block;
+      vertical-align: top;
+      width: 100%;
+
+      @include breakpoint($bp-med) {
+        width: 25%;
+      }
+    }
+  }
+
+  ul {
+    @extend %list-reset;
+  }
+
+  li {
+    display: block;
+
+    @include breakpoint($bp-med) {
+      display: inline-block;
+      vertical-align: top;
+      margin-right: -5px;
+    }
+  }
+
+  a {
+    color: $text-color;
+    font-weight: 700;
+    &.nav-header {
+      color: $purple;
+    }
+    &:focus,
+    &:hover {
+      text-decoration: none;
+    }
+    &.active {
+      text-decoration: underline;
+    }
+  }
+}
+
+.nav__dropdown {
+  @extend %list-reset;
+  display: none;
+  // position: absolute;
+  left: 0;
+  top: 100%;
+  width: 100%;
+  text-align: left;
+  z-index: 20;
+
+  li {
+    display: block;
+  }
+
+  a {
+    padding: .15em 0;
+    font-size: 1em;
+  }
+
+  .nav__dropdown {
+    display: block;
+
+    a {
+      font-weight: 300;
+      text-transform: none;
+    }
+  }
+}
+
+ul.nav__dropdown ul.nav__dropdown ul.nav__dropdown {
+  @include breakpoint($bp-med) {
+    display: none;
+  }
+}
+
+.nav-mobile-controls {
+  //margin: $space 0;
+  height: 32px;
+  margin: 0;
+  text-align: right;
+  .icon {
+    width: 2em;
+    height: 2em;
+    fill: $white;
+    &:hover,
+    &:focus {
+      fill: $white;
+    }
+  }
+}
+
+
+
+.meanmenu-reveal {
+  display: none !important;
+}
+
+.mean-nav {
+  display: none;
+
+  ul {
+    @extend %list-reset;
+  }
+
+  .nav__dropdown {
+    border-top: 0 none;
+  }
+}
+
+.mean-nav > ul {
+  display: block !important;
+}
+
+.mean-container {
+  .mean-bar {
+    background: transparent;
+    min-height: 0;
+    padding: 0;
+  }
+  .mean-nav {
+    margin-top: 0;
+    background: none;
+    ul {
+      li {
+        a {
+          border: 0 none;
+          text-transform: none;
+          &.active {
+            background: rgba(255, 255, 255, 0.15);
+          }
+          &.mean-expand {
+            padding: 0;
+            height: 32px;
+            padding: 11px;
+            line-height: 2em;
+            margin-top: 0;
+            &:hover,
+            &:focus {
+              background: rgba(255, 255, 255, 0.15);
+            }
+          }
+        }
+      }
+    }
+  }
+}

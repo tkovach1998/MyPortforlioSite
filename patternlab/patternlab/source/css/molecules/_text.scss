@@ -1,0 +1,152 @@
+
+
+/**
+ * Text Blocks
+ */
+
+.callout-text {
+
+}
+
+.intro-text {
+  margin-top: 0;
+  font-weight: bold;
+  font-size: $font-size-slightly-larger;
+}
+
+.lo-contractor-opportunities {
+  text-align: center;
+  @include breakpoint($bp-med) {
+    text-align: right;
+  }
+}
+
+/**
+ * Sidebar
+ */
+
+.l-sidebar {
+
+}
+
+.sidebar-title {
+  // border-bottom: 1px solid $white;
+}
+
+.sidebar-content {
+
+  .sidebar-title, p, li {
+    color: inherit;
+  }
+
+  .sidebar-filters {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .sidebar-filter {
+    margin-bottom: $space;
+  }
+
+  .sidebar-title {
+    margin: 0 0 $space 0;
+  }
+
+  a {
+    color: $white;
+    text-decoration: underline;
+
+    &:hover,
+    &:focus {
+      text-decoration: none;
+    }
+  }
+
+  .button {
+    margin: .5em 0;
+    text-decoration: none;
+  }
+
+  .is-reverse & {
+    color: $white;
+    background: $grey-dark;
+    padding: $pad;
+    margin-bottom: $space;
+  }
+}
+
+.sidebar-section {
+  padding: 1em 0;
+  border-top: 1px solid $white;
+}
+
+.video-info {
+
+}
+
+
+a.download-media {
+  display: inline-block;
+  cursor: pointer;
+  text-decoration: none;
+  .icon {
+    width: 1.5em;
+    height: 1.5em;
+  }
+
+  label {
+    display: inline-block;
+    cursor: pointer;
+    border-bottom: 1px $white solid;
+    max-width: 100%;
+    &:hover,
+    &:focus {
+      border-bottom: 1px $grey-dark solid;
+    }
+  }
+  &.white-quick-links {
+    margin: $space-quarter 0 4em 3em;
+    width: 100%;
+    .icon {
+      width: 1em;
+      height: 1em;
+      margin-top: $space-quarter;
+    }
+    label {
+      font-size: $font-size-sm;
+      text-transform: uppercase;
+      &:hover,
+      &:focus {
+        border-bottom: 1px $purple solid;
+      }
+    }
+  }
+}
+
+
+
+.my-quick-links {
+  .l-grid {
+    margin: 0;
+    .svg-text {
+      @include link-reverse-white;
+      display: inline-block;
+      cursor: pointer;
+      .icon {
+        width: 3em;
+        height: 3em;
+      }
+      label {
+        display: inline-block;
+        cursor: pointer;
+        border-bottom: 1px $purple solid;
+        max-width: 76%;
+        &:hover,
+        &:focus {
+          border-bottom: 1px $white solid;
+        }
+      }
+    }
+  }
+}

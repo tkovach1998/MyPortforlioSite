@@ -1,0 +1,39 @@
+.quick-links-section {
+  position: relative;
+  height: 100%;
+}
+.personalize-quick-links-overlay {
+  color: $white;
+  text-align: center;
+  padding: 0 10%;
+  position: absolute;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  @include breakpoint($bp-med) {
+    padding: 0 25%;
+  }
+}
+.my-quick-links {
+  color: $white;
+  .edit-quick-links {
+    @include breakpoint($bp-med) {
+      display: inline-block;
+      margin-left:  $space-double;
+    }
+    a {
+        @include link--white;
+    }
+  }
+  .text--clr-reverse {
+    text-transform: capitalize;
+    @include breakpoint($bp-med) {
+      display: inline-block;
+    }
+  }
+  .quick-links {
+    margin: $space-double 0;
+  }
+}

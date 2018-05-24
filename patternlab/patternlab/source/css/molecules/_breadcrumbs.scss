@@ -1,0 +1,46 @@
+.breadcrumbs-outer-container {
+  width: 100%;
+  padding: $space-half 0;
+}
+.breadcrumbs {
+  @extend %inline-list;
+  line-height: .75em;
+  li {
+    position: relative;
+    padding: 0 .5em;
+    padding-left: 1em;
+
+    &:before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      color: $grey-dark;
+      font-size: $font-size-sm;
+      font-weight: 700;
+      content: ':';
+    }
+
+    &:first-child {
+      padding-left: 0;
+
+      &:before {
+        content: '';
+      }
+    }
+  }
+
+  a {
+    display: block;
+    color: $grey-dark;
+    font-size: $font-size-sm;
+  }
+
+  .is-current {
+    a {
+      color: $grey-dark;
+      font-weight: bold;
+      text-decoration: none;
+      cursor: default;
+    }
+  }
+}

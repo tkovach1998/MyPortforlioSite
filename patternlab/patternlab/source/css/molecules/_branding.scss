@@ -1,0 +1,30 @@
+
+.header-logo {
+  a {
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+.icon--site-logo {
+  padding: $pad-half $pad;
+  max-width: 8.875em;
+  max-height: 5.875em;
+  width: 100%;
+  height: 100%;
+  // background: $link-color;
+  fill: $white;
+
+  @include breakpoint($bp-med) {
+    max-width: 10.875em;
+    max-height: 7.875em;
+  }
+
+  a &,
+  button & {
+    &:hover,
+    &:focus {
+      fill: $white;
+    }
+  }
+}

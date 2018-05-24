@@ -1,0 +1,54 @@
+
+.icon {
+  display: inline-block;
+  vertical-align: top;
+  fill: $link-color;
+  transition: fill 500ms;
+  transition: stroke 500ms;
+  &.icon--reverse-fill {
+    fill: $black;
+
+    a & {
+      &:hover,
+      &:focus {
+        fill: lighten($white, 15%);
+      }
+    }
+  }
+  &.icon--site-total-logo  {
+    &:hover,
+    &:focus {
+      fill: $white;
+    }
+  }
+  a &,
+  button & {
+    &:hover,
+    &:focus {
+      fill: $link-color--hover;
+    }
+  }
+}
+
+.icon--social {
+  width: 1.4375em;
+  height: 1.4375em;
+}
+
+.icon--globe-logo {
+  fill: $white;
+  width: 1.4375em;
+  height: 1.4375em;
+}
+
+.icon--remove {
+  fill: $white;
+  width: 1.2em;
+  height: 1.2em;
+  margin-left: $space-half;
+}
+
+
+.svg-white {
+  fill: $white;
+}

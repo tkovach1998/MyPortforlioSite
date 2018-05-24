@@ -1,0 +1,75 @@
+// .twitter-feed {
+//   color: #fff;
+//   font-style: italic;
+//   font-size: 14px;
+//   padding: 45px 30px;
+
+//   .icon {
+//     background-color: #fff;
+//     text-align: center;
+//     display: block;
+//     margin: auto;
+//     width: 2.4375em;
+//     height: 2.4375em;
+//   }
+
+//   a {
+//     color: #fff;
+//     font-weight: bold;
+//     font-style: normal;
+//     text-decoration: underline;
+//   }
+
+//   .content {
+//     border: none !important;
+//   }
+
+//   .id {
+//     font-size: 12px;
+//   }
+
+//   .text {
+//     text-align: center;
+//   }
+// }
+
+.twitter-feed {
+  color: #fff;
+}
+
+.twitter-feed-header {
+  margin-bottom: 2em;
+  text-align: center;
+
+  .icon {
+    background-color: #fff;
+    width: 2.4375em;
+    height: 2.4375em;
+  }
+}
+
+.twitter-feed__title {
+  margin: 0;
+  text-transform: none;
+  color: inherit;
+}
+
+.twitter-feed__user {
+  margin: 0;
+  color: inherit;
+  font-size: $font-size-slightly-smaller;
+}
+
+.twitter-post {
+  color: inherit;
+  margin-bottom: 2em;
+
+  p {
+    margin: 0;
+  }
+
+  a {
+    color: #fff;
+    text-decoration: underline;
+  }
+}

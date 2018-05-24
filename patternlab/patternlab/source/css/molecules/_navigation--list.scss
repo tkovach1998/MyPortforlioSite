@@ -1,0 +1,39 @@
+
+.nav--list {
+  @include nav-reset;
+
+  li {
+    border-left: 1px solid $text-color;
+
+    &:first-child {
+      border-left: 0 none;
+    }
+  }
+
+  a {
+    padding: 0 1em;
+    color: $text-color;
+    font-size: $font-size-sm;
+    font-weight: 700;
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+    }
+  }
+
+  &.nav--reverse {
+    li {
+      border-left: 1px solid #fff;
+
+      &:first-child {
+        border-left: 0 none;
+      }
+    }
+
+    a {
+      text-decoration: underline;
+    }
+  }
+}

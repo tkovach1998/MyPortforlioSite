@@ -1,0 +1,70 @@
+
+/**
+ * Table Styles
+ */
+
+table {
+  width: auto;
+  margin: $space 0;
+  //border: 1px solid $grey;
+  table-layout: fixed;
+  display: inline-block;
+
+  vertical-align: top;
+  max-width: 100%;
+
+
+  // optional - looks better for small cell values
+  white-space: nowrap;
+
+  border-collapse: collapse;
+  border-spacing: 0;
+
+  overflow-x: auto;
+  // optional - enable iOS momentum scrolling
+  -webkit-overflow-scrolling: touch;
+  // scrolling shadows
+  background: radial-gradient(ellipse at left, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0) 75%) 0 center, radial-gradient(ellipse at right, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0) 75%) 100% center;
+  background-size: 0.625em 100%, 0.625em 100%;
+  background-attachment: scroll, scroll;
+  background-repeat: no-repeat;
+
+  @include breakpoint($bp-content-break) {
+    display: grid;
+  }
+
+  th,
+  td {
+    padding: $space-half $space-double;
+    border: 1px solid $grey;
+  }
+
+  td {
+    &:first-child {
+      background-image: linear-gradient(to right, rgba(255,255,255, 1) 50%, rgba(255,255,255, 0) 100%);
+      background-repeat: no-repeat;
+      background-size: 1.250em 100%;
+    }
+    &:last-child {
+      background-image: linear-gradient(to left, rgba(255,255,255, 1) 50%, rgba(255,255,255, 0) 100%);
+      background-repeat: no-repeat;
+      background-position: 100% 0;
+      background-size: 1.250em 100%;
+    }
+  }
+
+  th {
+    text-align: center;
+    text-transform: uppercase;
+    background: $purple;
+    color: $white;
+  }
+  tbody {
+    tr {
+      th {
+        background: $grey-light;
+        color: $copy-black;
+      }
+    }
+  }
+}

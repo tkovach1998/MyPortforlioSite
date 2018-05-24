@@ -1,0 +1,49 @@
+
+.card {
+
+}
+
+.card-title {
+  color: $link-color;
+  margin: $space-half 0;
+}
+
+
+.card--callout {
+  text-align: center;
+
+  .icon {
+    width: 3em;
+    height: 3em;
+  }
+
+  .card-title {
+    color: $heading-color;
+  }
+}
+
+
+
+
+.card--post {
+  position: relative;
+
+  .card-post__body {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+  }
+}
+
+.card-post__figure {
+  img {
+    display: block;
+  }
+}
+
+.card-post__body {
+  padding: $pad;
+  background: #fff;
+  background: rgba(255, 255, 255, 0.85);
+}

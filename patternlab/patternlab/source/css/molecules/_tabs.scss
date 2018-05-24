@@ -1,0 +1,99 @@
+
+.tabs {
+  margin: $space 0;
+}
+
+.tab-controls {
+  @extend %inline-list;
+  border-bottom: 4px solid $link-color;
+
+  li {
+    background: #2e292a;
+    transition: background 500ms;
+    margin-left: $space-half;
+
+    &:first-child {
+      margin-left: 0;
+    }
+
+    &:hover,
+    &:focus {
+      background: darken(#2e292a, 15%);
+    }
+
+    &.is-active {
+      background: $link-color;
+
+      a {
+        color: #fff;
+        cursor: default;
+      }
+    }
+  }
+
+  a {
+    display: block;
+    padding: .5em 1em;
+    color: #aba9aa;
+    text-align: center;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: .85em;
+
+    @include breakpoint($bp-med) {
+      font-size: 1em;
+    }
+
+    &:hover,
+    &:focus {
+      text-decoration: none;
+    }
+  }
+
+  .flexbox & {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+
+    li {
+      display: flex;
+      border-top: 3px solid #f6921d;
+      margin-right: 0;
+      margin-left: 0;
+      width: 50%;
+
+      &:nth-child(1),
+      &:nth-child(2) {
+        border-top: 0 none;
+      }
+
+      @include breakpoint($bp-med) {
+        margin-left: $space-half;
+        width: auto;
+        border-top: 0 none;
+
+        &:first-child {
+          margin-left: 0;
+        }
+      }
+    }
+
+    a {
+      width: 100%;
+    }
+  }
+}
+
+.tab-groups {
+
+}
+
+.single-tab {
+  display: none;
+  padding: $pad;
+  background: #fff;
+
+  &.is-active {
+    display: block;
+  }
+}

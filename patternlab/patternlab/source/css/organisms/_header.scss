@@ -1,0 +1,113 @@
+
+.site-header {
+
+  background: $black;
+  background: url("../images/home-banner.jpg");
+  background-size: cover;
+  min-height:600px;
+}
+
+
+.header-container {
+  @extend %cf;
+  max-width: $max-width;
+  @include breakpoint($bp-med) {
+    margin: 0 auto;
+    padding: 0 $space;
+  }
+}
+
+.site-header--top {
+
+}
+.site-header--bot {
+  background: $black;
+  margin-bottom: 3em;
+  @include breakpoint($bp-med) {
+    background: none;
+    margin-bottom: 0;
+  }
+}
+
+.wake-up-or-pay-up {
+  width: 100%;
+  padding: 16em 1em 3em 1em;
+  @include breakpoint($bp-large) {
+    padding: 19em 1em;
+  }
+}
+
+.header-logo-container {
+
+}
+
+.nav-mobile-controls-container {
+  background: $black;
+  &.lo-nav-mobile-header {
+    background: $white;
+    border-top: 0.375em $black solid;
+    border-bottom: 0.375em $black solid;
+    @include breakpoint($bp-med) {
+      border: none;
+    }
+  }
+  float: left;
+  width: 100%;
+  padding: 0.5em 5%;
+  @include breakpoint($bp-med) {
+    background: $white;
+    width: auto;
+    float: none;
+    padding: 0;
+  }
+}
+
+.nav-mobile-controls {
+  // @include grid-span(2, 2);
+
+  @include breakpoint($bp-med) {
+    display: none;
+  }
+
+  .nav--icons {
+    position: relative;
+
+    li {
+      position: absolute;
+
+      &:nth-child(1) {
+        right: 0;
+      }
+
+      &:nth-child(2) {
+        right: 0;
+      }
+    }
+  }
+}
+
+
+
+.header-logo {
+  text-align: center;
+  float: left;
+  width: 100%;
+/*
+
+  @include breakpoint($bp-small-2) {
+    @include grid-span(3, 1);
+    text-align: left;
+  }
+  @include breakpoint($bp-med) {
+    @include grid-span(3, 1);
+    text-align: left;
+  }
+  @include breakpoint($bp-med-2) {
+    @include grid-span(3, 1);
+  }
+
+  @include breakpoint($bp-large) {
+    @include grid-span(7, 1);
+  }
+*/
+}

@@ -1,0 +1,48 @@
+
+fieldset {
+  padding: 0;
+  margin: 0;
+  border: 0 none;
+}
+
+.field-container {
+ // margin-bottom: $space;
+  &.signin {
+    display: inline-block;
+  }
+}
+
+/* Buy / Sell Vehicle Images */
+#fine-uploader-manual-trigger {
+  margin: $space 0;
+}
+
+#fine-uploader-manual-trigger .qq-upload-button {
+    margin-right: 15px;
+}
+
+#fine-uploader-manual-trigger .buttons {
+    width: 36%;
+}
+
+#fine-uploader-manual-trigger .qq-uploader .qq-total-progress-bar-container {
+    width: 60%;
+}
+
+.vehicle-uploaded-image {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  .veh-enlarge-image {
+    position: absolute;
+    top: .5em;
+    right: 3.5em;
+    max-width: 32px;
+  }
+  .veh-images-remove {
+    position: absolute;
+    top: .5em;
+    right: .5em;
+    max-width: 32px;
+  }
+}

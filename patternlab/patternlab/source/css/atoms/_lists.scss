@@ -1,0 +1,27 @@
+
+ul,
+ol {
+  margin: $space 0;
+  &.min-padd {
+    padding: 0 0 0 $pad;
+    li {
+      margin: 0;
+    }
+  }
+  li { margin: $space-half 0; }
+}
+
+dl {
+  margin: $space-half 0;
+
+  dt {
+    font-weight: bold;
+  }
+
+  dd {
+    margin: 0;
+    margin-bottom: $space-half;
+  }
+}
+
+

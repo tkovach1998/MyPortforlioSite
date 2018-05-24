@@ -1,0 +1,202 @@
+
+.block--media {
+  // margin-bottom: $space;
+
+  .flexbox & {
+    display: flex;
+    align-items: flex-start;
+  }
+}
+
+.media-figure {
+  margin-right: $space-and-half;
+  float: left;
+
+  img {
+    display: block;
+  }
+
+  .flexbox & {
+    float: none;
+  }
+}
+
+.media-body {
+
+  .flexbox & {
+    flex: 1;
+  }
+}
+
+.block--mini-figure {
+
+  .post-figure {
+    width: 3em;
+
+    img {
+      border: none;
+      border-radius: 0;
+    }
+  }
+
+  .post-body p {
+    width: 100%;
+
+    @include breakpoint($bp-large) {
+      margin: 1.3em 0 1.7em 0;
+      width: 20em;
+    }
+  }
+}
+
+
+.feature-post-list {
+  .section-title {
+    margin-top: 0;
+  }
+}
+
+.single-feature-post {
+  margin: 2em 0;
+
+  p {
+    margin: 0;
+  }
+}
+
+
+.reverse-heading-block {
+  background-color: $link-color;
+  color: $white;
+  padding: 1em 1.5em;
+  margin-top: 2em;
+  text-transform: uppercase;
+
+  .reverse-header {
+    margin: 0;
+    color: inherit;
+  }
+}
+
+.detail-table {
+  margin: 0;
+  border: none;
+  text-align: center;
+
+  &.table-align-left {
+    text-align: left;
+
+    th {
+      text-align: left;
+    }
+  }
+
+  td,
+  th {
+    padding: 1em;
+    border: none;
+
+    &:first-child {
+      font-weight: 600;
+    }
+  }
+
+  thead tr {
+    background-color: $background-reverse;
+    color: $white;
+  }
+
+  tbody tr {
+    background: #fff;
+
+    &:nth-child(2n+2) {
+      background: #f4dbbe;
+    }
+
+    td {
+      a {
+        color: $copy-black;
+        text-decoration: underline;
+      }
+    }
+  }
+
+  p {
+    margin: 0;
+  }
+
+  @include breakpoint(max-width $bp-med) {
+    overflow-x: auto;
+    display: block;
+
+    thead tr th,
+    tbody tr td {
+      padding: 0.5em;
+    }
+  }
+}
+
+
+.accordion-table {
+  tbody tr {
+
+    // Color classes added by js
+    &.color-1.color-1 {
+      background-color: #fff;
+    }
+
+    &.color-2.color-2 {
+      background-color: #f4dbbe;
+    }
+
+    &.accordion-content {
+      display: none;
+
+      div {
+        padding: 1em;
+        background: #f3f4f4;
+        font-weight: normal;
+      }
+    }
+
+    &.accordion-content.show {
+      display: table-row;
+    }
+
+    td {
+      &.table-accordion-button {
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+
+
+.account-block {
+  margin-top: 2em;
+  background-color: $background-reverse;
+  color: $white;
+  padding: 1.5em;
+
+  .title {
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+
+  .l-grid {
+    margin-top: 1em;
+
+    .l-grid-item {
+      margin-bottom: 0;
+    }
+
+    .label {
+      font-weight: 600;
+    }
+  }
+
+  p {
+    margin: 0;
+  }
+}

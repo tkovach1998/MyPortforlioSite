@@ -1,0 +1,118 @@
+
+.accordion {
+  margin: $space 0;
+  &.no-space {
+    margin: 0;
+  }
+}
+
+.accordion-group {
+
+}
+
+.accordion-heading {
+  color: $yellow;
+  background: $black-link-color;
+  transition: background 500ms;
+  border-bottom: 2px $yellow solid;
+  border-top: 2px $yellow solid;
+
+  &:hover,
+  &:focus {
+    background: $yellow-link-color--hover;
+  }
+  h4 {
+    a {
+      color: $yellow;
+      text-transform: none;
+      letter-spacing: 1px;
+      &:hover {
+        color: $black-link-color--hover;
+      }
+    }
+  }
+  a {
+    position: relative;
+    display: block;
+    padding: 1em;
+    @include breakpoint($bp-med) {
+      padding: 2em 1em 2em 2.5em;
+    }
+    color: $yellow;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
+
+    }
+
+    &:after {
+      position: absolute;
+      display: block;
+      right: .5em;
+      top: .8em;
+      @include breakpoint($bp-med) {
+        top: 2em;
+      }
+      content: '+';
+      padding: .75em;
+      line-height: 0;
+      text-align: center;
+      font-weight: normal;
+      background: $yellow;
+      color: $black;
+      font-weight: bold;
+      font-size: 1em;
+    }
+
+    .is-active & {
+      &:after {
+        content: '-';
+        width:  52.97px;
+      }
+    }
+
+    @include breakpoint($bp-med) {
+      font-size: 1.15em;
+    }
+  }
+}
+
+.accordion-collapse {
+  display: none;
+  padding: $pad;
+  @include breakpoint($bp-med) {
+    padding: $pad 4em;
+  }
+  background: $black;
+  color: $white;
+
+  .link {
+    margin: 0;
+
+    a {
+      color: $yellow-link-color;
+      text-decoration: underline;
+      font-weight: 600;
+    }
+  }
+
+  .l-grid-item.is-align-right {
+    text-align: left;
+    @include breakpoint($bp-med) {
+      text-align: right;
+    }
+  }
+
+  .is-active & {
+    display: block;
+  }
+}
+
+.offset-three-col {
+  p {
+    word-wrap: break-word;
+  }
+}

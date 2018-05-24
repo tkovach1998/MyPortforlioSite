@@ -1,0 +1,149 @@
+{
+	"title" : "attern Lab",
+	"htmlClass": "pl",
+	"bodyClass": "body",
+	"img": {
+		"landscape-4x3": {
+			"src": "../../images/fpo_4x3.png",
+			"alt": "4x3 Image"
+		},
+		"landscape-16x9": {
+			"src": "../../images/fpo_16x9.png",
+			"alt": "16x9 Image"
+		},
+		"square": {
+			"src": "../../images/fpo_square.png",
+			"alt": "Square Thumbnail"
+		},
+		"avatar" : {
+			"src" : "../../images/fpo_avatar.png",
+			"alt" : "Person Name"
+		},
+		"rectangle": {
+			"src": "http://placeimg.com/400/300/tech",
+			"alt": "Rectangle"
+		},
+		"fedex-demo-slider-image": {
+			"src": "../../images/fedex-demo-slider-image.jpg",
+			"alt": "fedex-demo-slider-image"
+		}
+	},
+	"homeBanners": {
+		"banner1": {
+			"title" : "1Safe Driving Records Recognized During National Truck Driver Appreciation Week",
+			"imgSrc" : "../../images/fedex-demo-slider-image.jpg",
+			"subTitle" : "Alert: Walgreens"
+		},
+		"banner2": {
+			"title" : "2Safe Driving Records Recognized During National Truck Driver Appreciation Week",
+			"imgSrc" : "../../images/fedex-demo-slider-image.jpg",
+			"subTitle" : "Truck Driver Appreciation Week"
+		},
+		"banner3": {
+			"title" : "3Safe Driving Records Recognized ",
+			"imgSrc" : "../../images/fedex-demo-slider-image.jpg",
+			"subTitle" : "Request: FAST Certification"
+		},
+		"banner4": {
+			"title" : "4Safe Driving Records Recognized During National Truck Driver Appreciation Week",
+			"imgSrc" : "../../images/fedex-demo-slider-image.jpg",
+			"subTitle" : "Recall: Wasbash Dollies"
+		},
+		"banner5": {
+			"title" : "5Safe Driving Records Recognized During National Truck Driver Appreciation Week",
+			"imgSrc" : "../../images/fedex-demo-slider-image.jpg",
+			"subTitle" : "PU Reminders and Warning"
+		}
+	},
+	"latestNews": {
+		"item1": {
+			"title" : "Customer Alert: Jeni's Splendid Ice Creams",
+			"date" : "MM/DD/YYYY"
+		},
+		"item2": {
+			"title" : "Fuel Tax Statements Available This Week",
+			"date" : "MM/DD/YYYY"
+		},
+		"item3": {
+			"title" : "CPC Pickup Reminder FY17 device",
+			"date" : "MM/DD/YYYY"
+		},
+		"item4": {
+			"title" : "Business Integrity Honesty Professionalism and Safety in Operations",
+			"date" : "MM/DD/YYYY"
+		},
+		"item5": {
+			"title" : "Recipient Closure Information can be Captured on STAR IV Device",
+			"date" : "MM/DD/YYYY"
+		}
+	},
+	"headline" : {
+		"short" : "Lorem ipsum dolor sit (37 characters)",
+		"medium" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. (72 characters)"
+	},
+	"instruction": {
+		"short": "Lorem ipsum dolor sit amet, impedit concludaturque ut nam."
+	},
+	"excerpt" : {
+		"short" : "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean com modo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient.",
+		"medium" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+		"long" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+	},
+	"description" : "So, setting about it as methodically as men might smoke out a wasps' nest, the Martians spread this strange stifling vapour over the Londonward country. The horns of the crescent slowly moved apart, until at last they formed a line from Hanwell to Coombe and Malden. All night through their destructive tubes advanced.",
+	"url" : "#",
+	"name" : {
+		"first": "Lacy",
+		"firsti": "L",
+		"middle": "Tommie",
+		"middlei": "T",
+		"last": "Way",
+		"lasti": "W"
+	},
+	"year" : {
+		"long": "2013",
+		"short": "13"
+	},
+	"month" : {
+		"long": "February",
+		"short": "Feb",
+		"digit": "02"
+	},
+	"dayofweek" : {
+		"long": "Monday",
+		"short": "Mon"
+	},
+	"day" : {
+		"long": "10",
+		"short": "10",
+		"ordinal": "th"
+	},
+	"hour" : {
+		"long": "01",
+		"short": "1",
+		"military": "13",
+		"ampm": "pm"
+	},
+	"minute" : {
+		"long": "20",
+		"short": "20"
+	},
+	"seconds" : "31",
+	"author" : {
+		"first-name": "Author",
+		"last-name": "Name"
+	},
+	"hero": true,
+	"emergency" : false,
+	"touts" : [
+		{ },
+		{ },
+		{ }
+	],
+	"latest-posts" : [
+		{ },
+		{ },
+		{ },
+		{ },
+		{ }
+	]
+}

@@ -1,0 +1,554 @@
+
+
+.outer-container {
+  @extend %cf;
+  width: 100%;
+  padding: $pad 0;
+  &.no-space {
+    padding: 0;
+  }
+}
+
+.container {
+  @extend %cf;
+  margin: 0 auto;
+  padding: 0 $space;
+  max-width: $max-width;
+}
+
+.inner-container {
+  @extend %cf;
+  margin: 0 auto;
+  max-width: $max-width;
+  @include breakpoint($bp-med) {
+
+  }
+}
+
+
+/**
+ * Header Layout
+ */
+
+.site-header {
+  .outside-header-container {
+    @include breakpoint($bp-med) {
+      margin: 0 auto;
+      padding: 0 $space;
+      max-width: $max-width;
+    }
+  }
+  .site-header--top {
+    @include grid-span(3, 1);
+    @include breakpoint($bp-med) {
+      @include grid-span(6, 1);
+    }
+    @include breakpoint($bp-large) {
+      @include grid-span(3, 1);
+    }
+  }
+  .site-header--bot {
+    @include grid-span(3, 1);
+
+    @include breakpoint($bp-med) {
+      @include grid-span(6, 1);
+    }
+    @include breakpoint($bp-large) {
+      @include grid-span(8, 5);
+    }
+  }
+}
+
+/**
+ * Two Col Layout
+ */
+
+.l-two-col {
+
+  .l-main {
+    @include grid-span(3, 1);
+
+    @include breakpoint($bp-med) {
+      @include grid-span(6, 1);
+    }
+/*
+    @include breakpoint($bp-med-2) {
+      @include grid-span(4, 1);
+    }
+*/
+    @include breakpoint($bp-large) {
+      @include grid-span(9, 1);
+    }
+  }
+
+  .l-sidebar {
+    @include grid-span(3, 1);
+
+    @include breakpoint($bp-med) {
+      @include grid-span(6, 1);
+    }
+
+/*
+    @include breakpoint($bp-med-2) {
+      @include grid-span(2, 5);
+    }
+*/
+    @include breakpoint($bp-large) {
+      @include grid-span(3, 10);
+    }
+  }
+}
+
+.home-banner-sidebar {
+  .l-main {
+    @include grid-span(3, 1);
+
+    @include breakpoint($bp-med) {
+      @include grid-span(6, 1);
+    }
+/*
+    @include breakpoint($bp-med-2) {
+      @include grid-span(4, 1);
+    }
+*/
+    @include breakpoint($bp-large) {
+      @include grid-span(8, 1);
+    }
+  }
+
+  .l-sidebar {
+    @include grid-span(3, 1);
+
+    @include breakpoint($bp-med) {
+      @include grid-span(6, 1);
+    }
+/*
+    @include breakpoint($bp-med-2) {
+      @include grid-span(2, 5);
+    }
+*/
+    @include breakpoint($bp-large) {
+      @include grid-span(4, 9);
+    }
+  }
+}
+
+.page--50-50 {
+  @extend %cf;
+  .col-1 {
+    @extend %cf;
+    @include grid-span(3, 1);
+    margin-bottom: $space;
+    @include breakpoint($bp-med) {
+      @include grid-span(6, 1);
+    }
+
+    @include breakpoint($bp-large) {
+      @include grid-span(6, 1);
+    }
+  }
+
+  .col-2 {
+    @extend %cf;
+    @include grid-span(3, 1);
+
+    @include breakpoint($bp-med) {
+      @include grid-span(6, 1);
+    }
+
+    @include breakpoint($bp-large) {
+      @include grid-span(6, 7);
+    }
+  }
+}
+
+
+.l-main,
+.l-sidebar {
+  padding: $pad;
+}
+
+.body-container {
+  .l-main {
+    padding: 0;
+  }
+  .l-sidebar {
+    padding: 0;
+    &.is-reverse {
+      background: none;
+    }
+  }
+}
+
+.l-sidebar {
+  &.is-reverse {
+    background: $background-reverse;
+  }
+}
+
+
+
+/**
+ * Grid Layout
+ */
+
+.l-grid {
+  margin-top: $space-double;
+  margin-left: (-$space);
+  &.l-grid--2up {
+    @include breakpoint($bp-med) {
+      .l-grid-item {
+        //padding-left: $space;
+        &:nth-child(odd) {
+          padding-left: 0;
+        }
+      }
+    }
+    @include breakpoint($bp-large) {
+      margin-left: (-$space-double);
+
+      .l-grid-item {
+        //padding-left: $space-double;
+        &:nth-child(odd) {
+          padding-left: 0;
+        }
+      }
+    }
+  }
+
+  &.l-grid--3up {
+    @include breakpoint($bp-med) {
+      .l-grid-item {
+        padding-left: $space;
+        &:nth-child(3n+1) {
+          padding-left: 0;
+        }
+      }
+    }
+    @include breakpoint($bp-large) {
+      margin-left: (-$space-double);
+
+      .l-grid-item {
+        padding-left: $space-double;
+        &:nth-child(3n+1) {
+          padding-left: 0;
+        }
+      }
+    }
+  }
+
+  .l-grid-item {
+    margin-bottom: $space;
+    padding: 0;
+  }
+
+
+  .flexbox & {
+    display: flex;
+    flex-wrap: wrap;
+
+    // Over-ride default `inline-block` spacing fix
+    .l-grid-item.l-grid-item {
+      margin-right: 0;
+    }
+
+    &.l-grid-box {
+      .l-grid-item {
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+      .l-grid-box-inner {
+        padding: 2em;
+      }
+    }
+  }
+}
+
+// Defaults to one-col
+.l-grid-item {
+  display: inline-block;
+  vertical-align: top;
+  width: 100%;
+
+
+  // Two Col
+  .l-grid--2up & {
+    @include breakpoint($bp-med) {
+      margin-right: -5px;
+      width: 50%;
+    }
+  }
+
+
+  // Three Col
+  .l-grid--3up & {
+    @include breakpoint($bp-med) {
+      margin-right: -5px;
+      width: 33.33%;
+    }
+  }
+
+
+  // Four Col
+  .l-grid--4up & {
+    @include breakpoint($bp-med) {
+      margin-right: -5px;
+      width: 50%;
+    }
+
+    @include breakpoint($bp-large) {
+      margin-right: -5px;
+      width: 25%;
+    }
+  }
+
+  // Four Col
+  .l-grid--5up & {
+
+    @include breakpoint($bp-large) {
+      margin-right: -5px;
+      width: 20%;
+    }
+
+  }
+}
+
+.l-block-list {
+  .l-item,
+  .l-grid-item {
+    margin-bottom: 4em;
+
+    @include breakpoint($bp-med) {
+      margin-bottom: 6em;
+    }
+  }
+}
+
+/**
+ * Box Layout
+ */
+
+.box-layout {
+  @extend %cf;
+
+  .box-item-left {
+    padding: 1.5em;
+    background-color: #f3f4f4;
+
+    @include breakpoint($bp-large) {
+      float: left;
+      width: calc(100% - 25em);
+    }
+
+    .flexbox & {
+      flex: 1;
+      float: none;
+      width: auto;
+    }
+  }
+
+  .box-item-right {
+    float: right;
+    padding: 1.5em;
+    width: 25em;
+    color: $white;
+    background-color: #231f20;
+
+    .flexbox & {
+      float: none;
+    }
+  }
+
+  .flexbox & {
+    display: flex;
+  }
+
+  @include breakpoint(max-width $bp-large) {
+    display: block !important;
+    height: auto;
+
+    .box-item-right {
+      width: 100%;
+    }
+  }
+}
+
+.field-layout {
+  @extend %cf;
+  @include nav-reset;
+  width: 100%;
+  small, span {
+    display: block;
+    width: 100%;
+    margin: $space-half 0;
+    clear: both;
+  }
+  &.add-spacing {
+    .field-container {
+      margin: $space-double 0;
+      @include breakpoint($bp-med) {
+        margin: $space 0;
+      }
+      a {
+        display: inline-block;
+      }
+    }
+  }
+  @include breakpoint($bp-med) {
+    &.field-layout-2up {
+      .field-container {
+        float:left;
+        width: 48%;
+        margin-right: 1%;
+        clear: left;
+        transition: height 500ms;
+        &:nth-child(even){
+          float:right;
+          margin-right: 0;
+          margin-left: 1%;
+          clear: right;
+        }
+      }
+    }
+  }
+}
+
+
+.radio-layout {
+  @extend %cf;
+  @include nav-reset;
+  width: 100%;
+  legend {
+    margin-bottom: $space-quarter;
+  }
+  label {
+    border: 1px $grey-dark solid;
+    padding: $pad-half;
+    margin-bottom: $space;
+    background: $white;
+    color: $copy-black;
+    &.field-error {
+      border: 1px $error solid;
+    }
+  }
+  @include breakpoint($bp-med) {
+    label {
+      float:left;
+      width: 48%;
+      margin-right: 1%;
+      clear: left;
+      &:nth-child(odd){
+        float:right;
+        margin-right: 0;
+        margin-left: 1%;
+        clear: right;
+      }
+    }
+    &.full-width {
+      label {
+        float:left;
+        width: 30%;
+        margin-right: 1%;
+        margin-left: 0;
+        clear: none;
+        &:nth-child(odd){
+          float:left;
+          margin-right: 1%;
+          margin-left: 0;
+          clear: none;
+        }
+      }
+    }
+  }
+}
+
+
+
+.checkbox-layout {
+  @extend %cf;
+  @include nav-reset;
+  width: 100%;
+  legend {
+    margin-bottom: $space-quarter;
+  }
+  label {
+    border: 1px $grey-dark solid;
+    padding: $pad-half;
+    margin-bottom: $space;
+    &.field-error {
+      border: 1px $error solid;
+    }
+  }
+}
+
+
+
+
+.offset-two-col {
+  @extend %cf;
+  padding: $pad-half $pad;
+  .col-1 {
+    @include grid-span(3, 1);
+
+    @include breakpoint($bp-med) {
+      @include grid-span(6, 1);
+    }
+
+    @include breakpoint($bp-large) {
+      @include grid-span(4, 1);
+    }
+  }
+  .col-2 {
+    @include grid-span(3, 1);
+
+    @include breakpoint($bp-med) {
+      @include grid-span(6, 1);
+    }
+
+    @include breakpoint($bp-large) {
+      @include grid-span(6, 7);
+    }
+  }
+}
+
+
+
+.offset-three-col {
+  @extend %cf;
+  padding: $pad-half $pad;
+  .col-1 {
+    @include grid-span(3, 1);
+
+    @include breakpoint($bp-med) {
+      @include grid-span(2, 1);
+    }
+
+    @include breakpoint($bp-large) {
+      @include grid-span(6, 1);
+    }
+  }
+  .col-2 {
+    @include grid-span(3, 1);
+
+    @include breakpoint($bp-med) {
+      @include grid-span(2, 3);
+    }
+
+    @include breakpoint($bp-large) {
+      @include grid-span(3, 7);
+    }
+  }
+  .col-3 {
+    @include grid-span(3, 1);
+
+    @include breakpoint($bp-med) {
+      @include grid-span(2, 5);
+    }
+
+    @include breakpoint($bp-large) {
+      @include grid-span(3, 10);
+    }
+  }
+}
+

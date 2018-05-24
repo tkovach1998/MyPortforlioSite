@@ -1,0 +1,19 @@
+html {
+  box-sizing: border-box;
+}
+* {
+  box-sizing: inherit;
+
+  &:before,
+  &:after {
+    box-sizing: inherit;
+  }
+}
+
+body {
+  @include copy-face;
+  color: $text-color;
+  line-height: 1.2;
+  background: $background-color;
+  background: #eee;
+}

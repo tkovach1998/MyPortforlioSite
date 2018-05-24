@@ -1,0 +1,9 @@
+# Ignore paths that contain user-generated content.
+bower_components
+node_modules/
+.DS_Store
+.sass-cache/*
+/sass-cache
+Thumbs.db
+.idea/
+*.lock

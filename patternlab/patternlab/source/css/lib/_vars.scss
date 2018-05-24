@@ -1,0 +1,234 @@
+
+/**
+ * Vars
+ * ====
+ */
+
+
+// --- Defaults --- //
+
+//Colors
+$grey: #808080;
+$grey-light: #e8e8e8; // Background Color
+$grey-light-2: #eee;
+$grey-light-3: #ddd;
+$grey-light-4: #bbb;
+$grey-med: #1f1f1f; // Primary Grey
+$grey-dark: #1a1a1a; // Primary Black
+$white: #fff;
+$black: #000;
+$orange: #F04629;
+$pink: #F4AEA8;
+$beige: #F2594B;
+$mgrey: #595959;
+
+$dim: rgba(0,0,0,0.5);
+$dimmer: rgba(0,0,0,0.8);
+
+$error: #f00;
+$valid: #089e00;
+
+$brand-facebook: #03539e;
+$brand-twitter: #35ccff;
+$brand-linkedin: #217bc1;
+
+//Typography
+$font-primary: 'PT Sans', sans-serif; // Myriad Pro Google Font Alternative
+$font-secondary: "League Gothic",sans-serif;
+
+$font-size-norm: 1em;
+$font-size-slightly-larger: 1.125em;
+$font-size-slightly-smaller: 0.875em;
+$font-size-sm: 0.75em;
+$font-size-large: 1.4375em;
+
+// Layout
+$max-width: 85.625rem;
+$offset-left-1: 4.5rem;
+
+$l-sidebar-width: 19.75rem;
+
+//Defaults
+$space: 1rem;
+$space-and-half: $space*1.5;
+$space-double: $space*2;
+$space-triple: $space*3;
+$space-quad: $space*4;
+$space-half: $space/2;
+$space-quarter: $space/4;
+
+$pad: 1em;
+$pad-and-half: $pad*1.5;
+$pad-double: $pad*2;
+$pad-half: $pad/2;
+$pad-quarter: $pad/4;
+
+//Borders
+$border-med: .1875em;
+$border-thick: .4375em;
+
+
+//Breakpoints
+$bp-small: 24em; // 384px
+$bp-small-2: 29.75em; // 476px
+$bp-small-3: 39.8em; // 636px
+$bp-med: 46.8em; // 748px
+$bp-med-2: 48em; // 768px
+$bp-med-3: 56.250em; // 900px
+$bp-large: 66em; // 1056px
+$bp-xl: 73em; // 1168px
+$bp-content-break: 85.500em; //1368px
+$bp-xxl: 89em; // 1424px
+$bp-xxxl: 93em; // 1488px
+
+
+
+// --- Base --- //
+
+$yellow: #FFF000;
+$blue: #31e0ce;
+$green: #3c873d;
+$dgreen: #2d662e;
+
+
+$purple:  #4d148c;
+//$orange:  #ff6600;
+$copy-black:   #212121;
+
+$border-color: #eee;
+$background-color: #fff;
+$background-reverse: #231f20;
+
+// -- Defaults --//
+$link-color: $grey-dark;
+$link-color--hover: lighten($link-color, 15%);
+$button-color: $grey-dark;
+$button-color--hover: lighten($button-color, 15%);
+
+$text-color: $copy-black;
+$text-color--tint: lighten($text-color, 30%);
+$text-color--shade: darken($text-color, 15%);
+
+$heading-color: $copy-black;
+$heading-color--tint: lighten($heading-color, 30%);
+$heading-color--shade: darken($heading-color, 15%);
+
+$callout-color: $yellow;
+$callout-color--tint: lighten($callout-color, 30%);
+$callout-color--shade: darken($callout-color, 15%);
+
+
+// -- Overrides for template colors --//
+
+// -- Yellows -- //
+$yellow-link-color: $yellow;
+$yellow-link-color--hover: darken($yellow, 15%);
+
+$yellow-button-color: $yellow;
+$yellow-button-color--hover: darken($yellow-button-color, 15%);
+
+$yellow-text-color: $yellow;
+$yellow-text-color--tint: lighten($text-color, 30%);
+$yellow-text-color--shade: darken($text-color, 15%);
+
+$yellow-heading-color: $yellow;
+$yellow-heading-color--tint: lighten($heading-color, 30%);
+$yellow-heading-color--shade: darken($heading-color, 15%);
+
+$yellow-callout-color: $yellow;
+$yellow-callout-color--tint: lighten($callout-color, 30%);
+$yellow-callout-color--shade: darken($callout-color, 15%);
+
+
+// -- Blacks --//
+$black-link-color: $black;
+$black-link-color--hover: lighten($link-color, 15%);
+
+$black-button-color: $black;
+$black-button-color--hover: lighten($black-button-color, 15%);
+
+$black-text-color: $black;
+$black-text-color--tint: lighten($text-color, 30%);
+$black-text-color--shade: darken($text-color, 15%);
+
+$black-heading-color: $black;
+$black-heading-color--tint: lighten($heading-color, 30%);
+$black-heading-color--shade: darken($heading-color, 15%);
+
+$black-callout-color: $black;
+$black-callout-color--tint: lighten($callout-color, 30%);
+$black-callout-color--shade: darken($callout-color, 15%);
+
+
+
+// -- Grid Settings -- //
+
+@include add-grid(3);
+@include add-grid(6 at $bp-med);
+@include add-grid(12 at $bp-large);
+
+@include add-gutter(1/3);
+@include add-gutter(.25 at $bp-xl);
+
+
+
+
+// -- Misc Settings -- //
+
+/**
+ * Hamburger Menu to X
+ *
+ */
+$button-width: 32px; // The width of the button area
+$button-height: 32px;  // The height of the button area
+$bar-thickness: 4px;  // The thickness of the button bars
+$button-pad: 2px;  // The left/right padding between button area and bars.
+$button-bar-space: 4px; // The spacing between button bars
+$button-transistion-duration: 0.3s; // The transition duration
+
+
+
+////////////////////////
+//      Settings      //
+////////////////////////
+
+// overlay
+$mfp-overlay-color: #0b0b0b !default; // Color of overlay screen
+$mfp-overlay-opacity: 0.8 !default; // Opacity of overlay screen
+$mfp-shadow: 0 0 8px rgba(0, 0, 0, 0.6) !default; // Shadow on image or iframe
+
+// spacing
+$mfp-popup-padding-left: 8px !default; // Padding from left and from right side
+$mfp-popup-padding-left-mobile: 6px !default; // Same as above, but is applied when width of window is less than 800px
+
+$mfp-z-index-base: 1040 !default; // Base z-index of popup
+
+// controls
+$mfp-include-arrows: true !default; // Include styles for nav arrows
+$mfp-controls-opacity: 0.65 !default; // Opacity of controls
+$mfp-controls-color: #FFF !default; // Color of controls
+$mfp-controls-border-color: #3F3F3F !default; // Border color of controls
+$mfp-inner-close-icon-color: #333 !default; // Color of close button when inside
+$mfp-controls-text-color: #CCC !default; // Color of preloader and "1 of X" indicator
+$mfp-controls-text-color-hover: #FFF !default; // Hover color of preloader and "1 of X" indicator
+
+// Iframe-type options
+$mfp-include-iframe-type: true !default; // Enable Iframe-type popups
+$mfp-iframe-padding-top: 40px !default; // Iframe padding top
+$mfp-iframe-background: #000 !default; // Background color of iframes
+$mfp-iframe-max-width: 900px !default; // Maximum width of iframes
+$mfp-iframe-ratio: 9/16 !default; // Ratio of iframe (9/16 = widescreen, 3/4 = standard, etc.)
+
+// Image-type options
+$mfp-include-image-type: true !default; // Enable Image-type popups
+$mfp-image-background: #444 !default;
+$mfp-image-padding-top: 40px !default; // Image padding top
+$mfp-image-padding-bottom: 40px !default; // Image padding bottom
+$mfp-include-mobile-layout-for-image: true !default; // Removes paddings from top and bottom
+
+// Image caption options
+$mfp-caption-title-color: #F3F3F3 !default; // Caption title color
+$mfp-caption-subtitle-color: #BDBDBD !default; // Caption subtitle color
+
+// A11y
+$mfp-use-visuallyhidden: false !default; // Hide content from browsers, but make it available for screen readers

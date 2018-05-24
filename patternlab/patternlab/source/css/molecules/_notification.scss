@@ -1,0 +1,79 @@
+
+.notification {
+  @extend %cf;
+  background: $callout-color;
+  padding: $pad-half;
+  color: $white;
+
+  a {
+    color: $white;
+
+    &:focus,
+    &:hover {
+      color: darken($white, 15%);
+    }
+  }
+}
+
+.notification__title {
+  @include grid-span(3, 1);
+
+  @include breakpoint($bp-med) {
+    @include grid-span(1.5, 1);
+  }
+
+  @include breakpoint($bp-large) {
+    @include grid-span(2, 1);
+  }
+
+  h4 {
+    margin: .5em 0;
+    color: $white;
+  }
+
+  .notification-icon {
+    fill: $white;
+    width: 3em;
+    height: 3em;
+  }
+
+  .media-figure {
+    margin-right: .5em;
+  }
+}
+
+.navigation__body {
+  @include grid-span(3, 1);
+
+  @include breakpoint($bp-med) {
+    @include grid-span(4, 2.5);
+  }
+
+  @include breakpoint($bp-large) {
+    @include grid-span(8, 3);
+  }
+}
+
+.notification--alert {
+  position: relative;
+  .container {
+    position: relative;
+  }
+}
+.notification--alert--close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+  &.added-space {
+    top: 1em;
+    right: 1em;
+  }
+  p {
+    margin: 0;
+    .close-img {
+      margin-left: $space-half;
+      vertical-align: bottom;
+    }
+  }
+}

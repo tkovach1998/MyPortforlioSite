@@ -1,0 +1,29 @@
+
+.page {
+  background: $grey-light;
+}
+
+.page-header {
+  h1 {
+    margin: 0;
+    color: $purple;
+    margin: $space 0;
+  }
+  .page-title {
+      -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+.body-container {
+  margin: $space auto;
+  padding: $space;
+  max-width: 85.625rem;
+    -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.spotlight-section {
+  background: url("../images/blackwidow.jpg");
+  background-size: cover;
+}

@@ -1,0 +1,216 @@
+/**
+ * Modal Contact Form
+ * 
+ */
+.list-unstyled {
+    padding-left: 0;
+    list-style: none;
+}
+
+
+
+
+
+/**
+ * Modal Styles
+ * 
+ */
+
+#modal-form-section {
+    /* The Modal (background) */
+    .modal {
+        display: none;
+        /* Hidden by default */
+        position: fixed;
+        /* Stay in place */
+        z-index: 1;
+        /* Sit on top */
+        padding-top: 100px;
+        /* Location of the box */
+        left: 0;
+        top: 0;
+        width: 100%;
+        /* Full width */
+        height: 100%;
+        /* Full height */
+        overflow: auto;
+        /* Enable scroll if needed */
+        background-color: rgb(0, 0, 0);
+        /* Fallback color */
+        background-color: rgba(0, 0, 0, 0.4);
+        /* Black w/ opacity */
+    }
+    /* Modal Content */
+    .modal-content {
+        background-color: #fefefe;
+        margin: auto;
+        padding: 20px;
+        border: 1px solid #888;
+        width: 80%;
+        transition: visibility 0s linear 0.3s, opacity 0.3s;
+        //max-width: 45em;
+    }
+    /* The Close Button */
+    .close {
+        color: #444;
+        float: right;
+        font-size: 50px;
+        font-weight: bold;
+        background: #FFF000;
+        padding: .1em 0.3em;
+        position: relative;
+        top: -20px;
+        right: -20px;
+    }
+
+    .close:hover,
+    .close:focus {
+        color: #000;
+        text-decoration: none;
+        cursor: pointer;
+    }
+}
+
+.button-group { 
+}
+.submit-button {
+    @include button-reset;
+    padding: 0.625em 3em 0.625em $pad;
+    color: $black;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    background: $yellow-button-color;
+    transition: background 500ms, border-color 500ms;
+    font-weight: bold;
+    position: relative;
+    display: inline-block;
+
+    
+    &:after {
+        content: '\2709';
+        position: absolute;
+        display: inline-block;
+        right: 0;
+        top: .05em; // content: '\2192';
+        padding: .75em;
+        line-height: 0;
+        text-align: center;
+        font-weight: normal;
+        color: $black;
+        font-weight: bold;
+        font-size: $font-size-large;
+    }
+}
+
+.reset-button { 
+@include button;
+float:left;
+
+ &:after { 
+    
+ }
+    }
+
+
+
+/**
+ * Form Field Styles
+ * 
+ */
+
+#form-fields-section {}
+
+
+
+/**
+ * Global Modal Form Styles
+ * 
+ */
+
+ .hidden {
+    display:none;
+ }
+
+.form-section {}
+
+.letter-content {
+   // max-width: 45em;
+}
+
+
+
+/**
+ * Letter Format
+ * 
+ */
+
+.letter-list {}
+
+.unfilled-field {}
+
+
+.has-error .form-control, .has-error .form-control:focus {
+    border: 2px solid #e74c3c;
+}
+
+.has-error .form-control {
+    border-color: #ffffff;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
+}
+
+.form-control, input {
+    border-width: 2px;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+
+
+.text-danger, .text-danger:hover {
+    color: #e74c3c;
+}
+
+
+input[type="email"], input[type="password"], input[type="text"], input[type="tel"], input[type="number"], input[type="url"], input[type="search"], input[type="date"], textarea, select {
+    width:30%;
+}
+
+
+.text-danger { 
+borer:2px solid #e74c3c;
+}
+
+.has-error .form-control, .has-error .form-control:focus {
+    border: 2px solid #e74c3c;
+}
+
+.has-error { 
+}
+
+.help-block.with-errors {
+    color: #e74c3c;
+}
+
+
+.form { 
+        display: none;
+}
+
+.text-success {
+    color: #18bc9c;
+       padding: 2em 0;
+    font-size: 1em;
+    font-weight: bold;
+}
+
+
+.rep-form { 
+
+    .cf  {
+        margin: 0; 
+        padding:0;
+    }
+
+}
